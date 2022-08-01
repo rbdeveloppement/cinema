@@ -1,15 +1,14 @@
 import { BaseModel } from "./baseModel.model";
 
-export class film extends BaseModel{
-   
-    title = "";
-    synopsis = ""; 
-    affiche = ""; 
-   
-    constructor(props){
-        super();
-        this.assign(props);
-    }
+export class Film extends BaseModel{
 
+    title = "";
+    affiche = "";
+    synopsis = "";
+
+    constructor(jsonObj){
+        super();
+        this.assign(jsonObj);
+    }
 
 }

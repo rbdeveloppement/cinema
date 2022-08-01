@@ -2,12 +2,12 @@ import { BaseModel } from "./baseModel.model";
 
 export class Reservation extends BaseModel{
 
-    customer = ";"
+    customer = "";
     nbPlace = 0;
-    is_seance = -1;
+    seance_id = -1;
 
-    constructor(props){
-        super(props);
-        this.assign(props);
+    constructor(jsonObj){
+        super();
+        this.assign(jsonObj);
     }
 }

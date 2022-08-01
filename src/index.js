@@ -1,11 +1,11 @@
 import { DataManager } from "./helpers/dataManager.helper.js";
-import { Film } from "./models/film.model.js";
-import { Reservation } from "./models/reservation.model.js";
-import { Salle } from "./models/salle.model.js";
-import { Seance } from "./models/seance.model.js";
+import { Film } from "./models/filmModel.model.js";
+import { Reservation } from "./models/reservationModel.model";
+import { Salle } from "./models/salleModel.model";
+import { Seance } from "./models/seanceModel.model";
 
 const dm = new DataManager(["film","reservation","salle","seance"]);
-// dm.initDataStorage();
+dm.initDataStorage();
 
 // const filmJsonObj = {"id":1,"title":"Avenger's 1","synopsis":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quibusdam quisquam. Quasi blanditiis quam laborum est quae facere a. Enim fuga qui, distinctio deserunt molestias consequatur necessitatibus nesciunt repudiandae fugiat!","affiche":"https://picsum.photos/id/1001/400/600"};
 // const film1 = new Film(filmJsonObj);
