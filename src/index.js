@@ -1,11 +1,11 @@
 import { DataManager } from "./helpers/dataManager.helper.js";
-import { Film } from "./models/filmModel.model.js";
-import { Reservation } from "./models/reservationModel.model";
-import { Salle } from "./models/salleModel.model";
-import { Seance } from "./models/seanceModel.model";
+import { Film } from "./models/film.model.js";
+import { Reservation } from "./models/reservation.model.js";
+import { Salle } from "./models/salle.model.js";
+import { Seance } from "./models/seance.model.js";
 
 const dm = new DataManager(["film","reservation","salle","seance"]);
-dm.initDataStorage();
+// dm.initDataStorage();
 
 // const filmJsonObj = {"id":1,"title":"Avenger's 1","synopsis":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quibusdam quisquam. Quasi blanditiis quam laborum est quae facere a. Enim fuga qui, distinctio deserunt molestias consequatur necessitatibus nesciunt repudiandae fugiat!","affiche":"https://picsum.photos/id/1001/400/600"};
 // const film1 = new Film(filmJsonObj);
@@ -23,19 +23,26 @@ dm.initDataStorage();
 // const seance1 = new Seance(seanceJsonObj);
 // console.log(seance1);
 
-const films = dm.getAll("film");
-const reservations = dm.getAll("reservation");
-const salles = dm.getAll("salle");
-const seances = dm.getAll("seance");
+// const films = dm.getAll("film");
+// const reservations = dm.getAll("reservation");
+// const salles = dm.getAll("salle");
+// const seances = dm.getAll("seance");
 
-console.log(films);
-console.log(reservations);
-console.log(salles);
-console.log(seances);
+// console.log(films);
+// console.log(reservations);
+// console.log(salles);
+// console.log(seances);
 
 
 const film1 = dm.getOne("film", 1);
-const film10 = dm.getOne("film", 10);
+// film1.title = "nouveau titre";
+// dm.updateOne(film1);
 
-console.log(film1);
-console.log(film10);
+dm.deleteOne(film1);
+// const film10 = dm.getOne("film", 10);
+
+// console.log(film1);
+// console.log(film10);
+
+// const newFilm = new Film({title:"Avenger's 6", synopsis:"description résumé", affiche:'https://picsum.photos/id/1006/400/600'})
+// dm.insertOne(newFilm);
